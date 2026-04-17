@@ -371,7 +371,7 @@
 
   .categories-grid {
     display: flex;
-    gap: 70px;
+    gap: 60px;
     justify-content: center;
     flex-wrap: wrap;
   }
