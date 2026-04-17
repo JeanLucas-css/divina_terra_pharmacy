@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="icon" href="imagens/logo_aba.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divina Terra | Heathy Blog</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" Brandon Grotesque>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="stylesANTIGO.css">
+    
+<!-- ===== TOP HEADER ===== -->
+<header id="top-header">
+  <a href="index.html" class="logo-area">
+    <div class="logo-container">
+      <!-- Placeholder para o logo oficial -->
+          <img src="Imagens\LOGO.png">
+    </div>
+  </a>
+
+  <nav class="top-nav">
+    <a href="index.html">INÍCIO</a>
+    <a href="menublogs.html">BLOG</a>
+    <a href="sobre.html">SOBRE NÓS</a>
+  </nav>
+
+  <div class="search-bar">
+    <button onclick="doSearch()">
+      <i class="fa-solid fa-magnifying-glass" style="color: #c2baaf;"></i>
+    </button>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <input type="text" id="search-input" placeholder="encontre o que você precisa..." onkeydown="handleSearch(event)">
+  </div>
+
+  <nav class="top-nav">
+    <a href="contato.html">CONTATO</a>
+  </nav>
+</header>
+
+<!-- Search Results Overlay -->
+<div id="search-results"></div>
+
+<!-- ===== SECONDARY NAV ===== -->
+<nav id="secondary-nav">
+  <div class="item"><a href="https://www.lojadivinaterra.com.br/suplementos">CATEGORIAS</a></div>
+  <div class="item"><a href="https://www.lojadivinaterra.com.br/imunidade">SAÚDE</a></div>
+  <div class="item"><a href="https://www.lojadivinaterra.com.br/bem-estar">BELEZA</a></div>
+  <div class="item"><a href="https://www.lojadivinaterra.com.br/saude-da-mulher">FITNESS</a></div>
+  <div class="item"><a href="https://www.lojadivinaterra.com.br/sono">FAÇA SEU PEDIDO</a></div>
+  <div class="item1"><a href="https://www.lojadivinaterra.com.br/imunidade" class="active">MANIPULE SUA RECEITA</a></div>
+</nav>
+</head>
+
+    <!-- Banner Principal -->
+    <div class="banner-container" style="max-width: 1300px; margin: 0px auto; padding: 0 1.5rem;">
+        <img src="Imagens\Banner1.png" alt="Banner Noorskin">
+    </div>
+
+    <main>
+        <!-- Grid de Conteúdos (Inspirado no Blog) -->
+        <section class="content-grid" id="content-grid">
+            <article data-blog-post class="blog-card" onclick="window.location.href='pascoadivina.html'" style="cursor: pointer;">
+                <div class="card-img-wrapper">
+                    <img class="card-img-wrapper-placeholder" src="Imagens/3.png" alt="Páscoa Divina Terra">
+                    <div class="blog-img-placeholder"></div>
+                </div>
+                <div class="card-body blog-info">
+                    <h2 class="card-title">Páscoa & Divina Terra<p>tudo o que faz bem </h2>
+                    <span class="card-date">01 abril 2026</span>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="window.location.href='diadamulher.html'" style="cursor: pointer;">
+                <div class="card-img-wrapper">
+                    <img src="Imagens\4.png" alt="Dia da Mulher">
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">Celebre o Dia da Mulher com Haoma!</h2>
+                    <span class="card-date">13 fevereiro 2026</span>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="window.location.href='sauderesabor.html'" style="cursor: pointer;">
+                <div class="card-img-wrapper">
+                    <img src="Imagens\2.png" alt="Saúde e Sabor">
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">Mais saúde e sabor no seu dia a dia</h2>
+                    <span class="card-date">28 janeiro 2026</span>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="card-img-wrapper">
+                    <img src="Imagens\8.png" alt="Ectoína">
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">Seu aliado no cuidado integral</h2>
+                    <span class="card-date">27 janeiro, 2026</span>
+                </div>
+            </article>
+        </section>
+        
+        <section class="content-grid2" id="content-grid2">
+            <article class="blog-card" onclick="window.location.href='pascoadivina.html'" style="cursor: pointer;">
+                <div class="card-img-wrapper">
+                    <img src="Imagens/7.png" alt="Páscoa Divina Terra">
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">Dicas de Lanches Rápidos <p> -volta às aulas-</h2>
+                    <span class="card-date">10 julho 2026</span>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="window.location.href='diadamulher.html'" style="cursor: pointer;">
+                <div class="card-img-wrapper">
+                    <img src="Imagens/1.png" alt="Monolaurina">
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">Metas para 2026</h2>
+                    <span class="card-date">31 de dezembro 2025</span>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="card-img-wrapper">
+                    <img src="Imagens\6.png" alt="Fadiga ocular">
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">Os segredos para um intestino saudável</h2>
+                    <span class="card-date">28 janeiro, 2026</span>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="card-img-wrapper">
+                    <img src="Imagens\5.png" alt="Ectoína">
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">Reequilibre o ritmo para sustentar</h2>
+                    <span class="card-date">27 janeiro, 2026</span>
+                </div>
+            </article>
+        </section>
+
+        <!-- Botão Carregar Mais Funcional -->
+        <div class="load-more-container">
+            <button class="btn-carregar-mais" id="btn1" onclick="carregarMais(1)">Carregar mais</button>
+        </div>
+        <!-- Botão 1 -->
+
+
+<!-- =============================================
+     SEÇÃO 2 — editável, aparece ao clicar btn1
+     ============================================= -->
+<section class="content-grid3 secao-oculta" id="secao2">
+    <article class="blog-card" onclick="window.location.href='post5.html'" style="cursor: pointer;">
+        <div class="card-img-wrapper">
+            <img src="Imagens\2.png" alt="Post 5">
+        </div>
+        <div class="card-body">
+            <h2 class="card-title">Título do post 5 aqui</h2>
+            <span class="card-date">20 dezembro 2025</span>
+        </div>
+    </article>
+
+    <article class="blog-card" onclick="window.location.href='post6.html'" style="cursor: pointer;">
+        <div class="card-img-wrapper">
+            <img src="Imagens\2.png" alt="Post 6">
+        </div>
+        <div class="card-body">
+            <h2 class="card-title">Título do post 6 aqui</h2>
+            <span class="card-date">15 dezembro 2025</span>
+        </div>
+    </article>
+
+    <article class="blog-card" onclick="window.location.href='post7.html'" style="cursor: pointer;">
+        <div class="card-img-wrapper">
+            <img src="Imagens\2.png" alt="Post 7">
+        </div>
+        <div class="card-body">
+            <h2 class="card-title">Título do post 7 aqui</h2>
+            <span class="card-date">10 dezembro 2025</span>
+        </div>
+    </article>
+
+    <article class="blog-card" onclick="window.location.href='post8.html'" style="cursor: pointer;">
+        <div class="card-img-wrapper">
+            <img src="Imagens\2.png" alt="Post 8">
+        </div>
+        <div class="card-body">
+            <h2 class="card-title">Título do post 8 aqui</h2>
+            <span class="card-date">05 dezembro 2025</span>
+        </div>
+    </article>
+</section>
+
+<!-- Botão 2 (fica oculto junto com a seção 2) -->
+<div class="secao-oculta" id="wrapper-btn2">
+    <button class="btn-carregar-mais" id="btn2" onclick="carregarMais(2)">Carregar mais</button>
+</div>
+
+<!-- =============================================
+     SEÇÃO 3 — editável, aparece ao clicar btn2
+     ============================================= -->
+<section class="content-grid3 secao-oculta" id="secao3">
+    <article class="blog-card" onclick="window.location.href='post9.html'" style="cursor: pointer;">
+        <div class="card-img-wrapper">
+            <img src="Imagens\2.png" alt="Post 9">
+        </div>
+        <div class="card-body">
+            <h2 class="card-title">Título do post 9 aqui</h2>
+            <span class="card-date">30 novembro 2025</span>
+        </div>
+    </article>
+    <article class="blog-card" onclick="window.location.href='post9.html'" style="cursor: pointer;">
+        <div class="card-img-wrapper">
+            <img src="Imagens\2.png" alt="Post 9">
+        </div>
+        <div class="card-body">
+            <h2 class="card-title">Título do post 9 aqui</h2>
+            <span class="card-date">30 novembro 2025</span>
+        </div>
+    </article>
+    <article class="blog-card" onclick="window.location.href='post9.html'" style="cursor: pointer;">
+        <div class="card-img-wrapper">
+            <img src="Imagens\2.png" alt="Post 9">
+        </div>
+        <div class="card-body">
+            <h2 class="card-title">Título do post 9 aqui</h2>
+            <span class="card-date">30 novembro 2025</span>
+        </div>
+    </article>
+    <article class="blog-card" onclick="window.location.href='post9.html'" style="cursor: pointer;">
+        <div class="card-img-wrapper">
+            <img src="Imagens\2.png" alt="Post 9">
+        </div>
+        <div class="card-body">
+            <h2 class="card-title">Título do post 9 aqui</h2>
+            <span class="card-date">30 novembro 2025</span>
+        </div>
+    </article>
+
+    <!-- Adicione mais cards aqui seguindo o mesmo padrão -->
+</section>
+
+<div class="secao-oculta" id="wrapper-btn3">
+    <button class="btn-carregar-mais" id="btn3" onclick="carregarMais(2)">Carregar mais</button>
+</div>
+
+<!-- =============================================
+     JAVASCRIPT — adicione antes do </body>
+     ============================================= -->
+<script>
+    function carregarMais(secao) {
+        if (secao === 1) {
+            // Mostra seção 2 e o botão 2
+            document.getElementById('secao2').classList.remove('secao-oculta');
+            document.getElementById('secao2').classList.add('secao-visivel');
+            document.getElementById('wrapper-btn2').classList.remove('secao-oculta');
+            // Esconde o botão 1
+            document.getElementById('btn1').style.display = 'none';
+        }
+
+        if (secao === 2) {
+            // Mostra seção 3
+            document.getElementById('secao3').classList.remove('secao-oculta');
+            document.getElementById('secao3').classList.add('secao-visivel');
+            document.getElementById('wrapper-btn3').classList.remove('secao-oculta');
+            // Esconde o botão 2
+            document.getElementById('wrapper-btn2').style.display = 'none';
+            // Se quiser um botão 3, repita o padrão aqui
+        }
+    }
+</script>
+    </main>
+
+    <!-- Rodapé Oficial Divina Terra -->
+    <html lang="pt-BR">
+        <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+          <title>Rodapé</title>
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+          <link rel="stylesheet" href="footer.css">
+        </head>
+<body>
+        
+        
+          <!-- Social -->
+          <div class="footer-social">
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
+                <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" style="fill:#fff"/>
+              </svg>
+            </a>
+          </div>
+        <!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-logo">
+    <div class="logo-main">
+      <img src="Imagens\LOGOGRANDE.png">
+    </div>
+  </div>
+
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h5>QUEM SOMOS</h5>
+      <p>Estamos a tantos anos no mercado, trabalhando com marcas com garantia de qualidade e produtos autorais com pesquisas e análises comprovadas. Melhoria de saúde, qualidade de vida e produtividade. Tudo em um só lugar.</p>
+    </div>
+    <div class="footer-col">
+      <h5>INSTITUCIONAL</h5>
+      <a href="sobre.html">Sobre nós</a>
+      <a href="como-comprar.html">Como comprar</a>
+      <a href="garantia.html">Garantia de qualidade</a>
+      <a href="privacidade.html">Política de privacidade e cookies</a>
+      <a href="menublogs.html">Blog</a>
+    </div>
+    <div class="footer-col">
+      <h5>ATENDIMENTO</h5>
+      <p style="color:rgba(255,255,255,0.6);margin-bottom:8px;">Seg a Sex das 8h às 20h</p>
+      <a href="suporte.html">Suporte &amp; dúvidas</a>
+      <a href="tel:51999151221">telefone: (51) 999151221</a>
+      <a href="mailto:online@divinaterrapharmacy.com.br">online@divinaterrapharmacy.com.br</a>
+      <a href="https://maps.google.com" target="_blank">R. Independência, 1273,<br>São Leopoldo 93010-004</a>
+    </div>
+    <div class="footer-col">
+      <h5>REDES SOCIAIS</h5>
+      <div class="social-icons">
+        <a href="https://instagram.com" target="_blank" class="social-icon" title="Instagram">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://youtube.com" target="_blank" class="social-icon" title="YouTube">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+        </a>
+        <a href="https://facebook.com" target="_blank" class="social-icon" title="Facebook">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    Copyright © 2060 – Todos os direitos reservados – Divina Terra Pharmacy
+  </div>
+</footer>
+
+<script>
+// ===== BANNER SLIDER =====
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const dotsContainer = document.getElementById('slider-dots');
+let autoplayTimer;
+
+// Create dots
+slides.forEach((_, i) => {
+  const dot = document.createElement('div');
+  dot.className = 'dot' + (i === 0 ? ' active' : '');
+  dot.addEventListener('click', () => goToSlide(i));
+  dotsContainer.appendChild(dot);
+});
+
+function updateSlider() {
+  slides.forEach((s, i) => s.classList.toggle('active', i === currentSlide));
+  document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === currentSlide));
+}
+
+function goToSlide(n) {
+  currentSlide = (n + slides.length) % slides.length;
+  updateSlider();
+  resetAutoplay();
+}
+
+function slideMove(dir) { goToSlide(currentSlide + dir); }
+
+function resetAutoplay() {
+  clearInterval(autoplayTimer);
+  autoplayTimer = setInterval(() => goToSlide(currentSlide + 1), 5000);
+}
+
+resetAutoplay();
+
+// ===== PRODUCTS CAROUSEL =====
+let productIndex = 0;
+const track = document.getElementById('products-track');
+const totalProducts = track.children.length;
+const visibleProducts = 4;
+const maxIndex = totalProducts - visibleProducts;
+
+function productMove(dir) {
+  productIndex += dir;
+  if (productIndex > maxIndex) productIndex = 0;
+  if (productIndex < 0) productIndex = maxIndex;
+  const cardWidth = track.children[0].offsetWidth + 20;
+  track.style.transform = `translateX(-${productIndex * cardWidth}px)`;
+}
+
+// ===== SEARCH =====
+const searchData = [
+  { title: 'Saúde', url: 'saude.html' },
+  { title: 'Beleza', url: 'beleza.html' },
+  { title: 'Fitness', url: 'fitness.html' },
+  { title: 'Emagrecer', url: 'emagrecer.html' },
+  { title: 'Saúde Sexual', url: 'saude-sexual.html' },
+  { title: 'Manipule sua Receita', url: 'receita.html' },
+  { title: 'Faça seu Pedido', url: 'pedido.html' },
+  { title: 'Blog', url: 'menublogs.html' },
+  { title: 'Sobre Nós', url: 'sobre.html' },
+  { title: 'Contato', url: 'contato.html' },
+];
+
+const searchResultsEl = document.getElementById('search-results');
+
+function doSearch() {
+  const q = document.getElementById('search-input').value.toLowerCase().trim();
+  if (!q) { searchResultsEl.style.display = 'none'; return; }
+  const results = searchData.filter(item => item.title.toLowerCase().includes(q));
+  if (results.length === 0) {
+    searchResultsEl.innerHTML = '<div class="search-result-item">Nenhum resultado encontrado.</div>';
+  } else {
+    searchResultsEl.innerHTML = results.map(r =>
+      `<div class="search-result-item" onclick="location.href='${r.url}'">${r.title}</div>`
+    ).join('');
+  }
+  searchResultsEl.style.display = 'block';
+}
+
+function handleSearch(e) {
+  if (e.key === 'Enter') doSearch();
+  else if (e.key === 'Escape') searchResultsEl.style.display = 'none';
+  else setTimeout(doSearch, 100);
+}
+
+document.addEventListener('click', e => {
+  if (!e.target.closest('.search-bar') && !e.target.closest('#search-results')) {
+    searchResultsEl.style.display = 'none';
+  }
+});
+
+// ===== LOAD BLOG POSTS FROM menublogs.html =====
+async function loadBlogPosts() {
+  const grid = document.getElementById('blog-grid');
+  try {
+    const res = await fetch('menublogs.html');
+    if (!res.ok) throw new Error('not found');
+    const text = await res.text();
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(text, 'text/html');
+
+    // Procura por elementos com data-blog-post ou .blog-post-item
+    const posts = doc.querySelectorAll('[data-blog-post], .blog-post-item, .post-card, article');
+
+    if (posts.length === 0) throw new Error('no posts found');
+
+    const recent = Array.from(posts).slice(0, 4);
+    grid.innerHTML = '';
+
+    recent.forEach(post => {
+      const title = post.querySelector('h1,h2,h3,h4,.post-title')?.textContent || 'Título título';
+      const date = post.querySelector('.date,.post-date,time')?.textContent || '01 abril 2026';
+      const img = post.querySelector('img')?.getAttribute('src') || '';
+      const link = post.querySelector('a')?.getAttribute('href') || 'menublogs.html';
+
+      const card = document.createElement('a');
+      card.className = 'blog-card';
+      card.href = link;
+      card.innerHTML = `
+        <div class="blog-img">
+          ${img
+            ? `<img src="${img}" alt="${title}">`
+            : `<div class="card-img-wrapper-placeholder"></div>`}
+        </div>
+        <div class="blog-info">
+          <h4>${title}</h4>
+          <div class="date">${date}</div>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+
+  } catch (e) {
+    // Fallback: mostra cards placeholder com link para menublogs.html
+    grid.innerHTML = '';
+    for (let i = 0; i < 4; i++) {
+      const card = document.createElement('a');
+      card.className = 'blog-card';
+      card.href = 'menublogs.html';
+      card.innerHTML = `
+        <div class="blog-img"><div class="card-img-wrapper-placeholder"></div></div>
+        <div class="blog-info">
+          <h4>Título título</h4>
+          <div class="date">01 abril 2026</div>
+        </div>
+      `;
+      grid.appendChild(card);
+    }
+  }
+}
+
+loadBlogPosts();
+</script>
+  </body>
+</html>

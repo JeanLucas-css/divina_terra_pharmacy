@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="imagens/logo_aba.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divina Terra Pharmacy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== TOP HEADER ===== -->
+<header id="top-header">
+  <a href="index.html" class="logo-area">
+    <div class="logo-container">
+      <!-- Placeholder para o logo oficial -->
+          <img src="Imagens\LOGO.png">
+    </div>
+  </a>
+
+  <nav class="top-nav">
+    <a href="index.html">INÍCIO</a>
+    <a href="menublogs.html">BLOG</a>
+    <a href="sobre.html">SOBRE NÓS</a>
+  </nav>
+
+  <div class="search-bar">
+    <button onclick="doSearch()">
+      <i class="fa-solid fa-magnifying-glass" style="color: #c2baaf;"></i>
+    </button>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <input type="text" id="search-input" placeholder="encontre o que você precisa..." onkeydown="handleSearch(event)">
+  </div>
+
+  <nav class="top-nav">
+    <a href="contato.html">CONTATO</a>
+  </nav>
+</header>
+
+<!-- Search Results Overlay -->
+<div id="search-results"></div>
+
+<!-- ===== SECONDARY NAV ===== -->
+<nav id="secondary-nav">
+  <div class="item"><a href="https://www.lojadivinaterra.com.br/suplementos">CATEGORIAS</a></div>
+  <div class="item"><a href="https://www.lojadivinaterra.com.br/imunidade">SAÚDE</a></div>
+  <div class="item"><a href="https://www.lojadivinaterra.com.br/bem-estar">BELEZA</a></div>
+  <div class="item"><a href="https://www.lojadivinaterra.com.br/saude-da-mulher">FITNESS</a></div>
+  <div class="item"><a href="https://www.lojadivinaterra.com.br/sono">FAÇA SEU PEDIDO</a></div>
+  <div class="item1"><a href="https://www.lojadivinaterra.com.br/imunidade" class="active">MANIPULE SUA RECEITA</a></div>
+</nav>
+
+<!-- ===== BANNER SLIDER ===== -->
+<section id="banner-slider">
+  <!-- SLIDE 1 -->
+  <div class="slide active">
+    <!-- Substitua o src da img abaixo pela sua imagem: <img src="banner1.jpg" class="slide-bg"> -->
+    <div class="slide-bg-placeholder" style="background: linear-gradient(120deg, #1a3a2a 0%, #2d5a3d 50%, #3d7a5d 100%);"></div>
+    <div class="slide-content">
+      <div class="eyebrow">Distribuindo</div>
+      <h2>Confiança e Qualidade</h2>
+      <p>Há mais de 10 anos atendendo com excelência. Pioneiros no e-commerce desde 2008. Servimos você com qualidade.</p>
+      <a href="sobre.html" class="btn-slide">Quem somos</a>
+    </div>
+  </div>
+
+  <!-- SLIDE 2 -->
+  <div class="slide">
+    <!-- <img src="banner2.jpg" class="slide-bg"> -->
+    <div class="slide-bg-placeholder" style="background: linear-gradient(120deg, #2a1a3a 0%, #5a2d5a 50%, #7a3d7a 100%);"></div>
+    <div class="slide-content">
+      <div class="eyebrow">Fórmulas Exclusivas</div>
+      <h2>Manipulação Personalizada</h2>
+      <p>Receitas únicas para suas necessidades. Produtos manipulados com a mais alta qualidade e tecnologia farmacêutica.</p>
+      <a href="receita.html" class="btn-slide">Manipule sua receita</a>
+    </div>
+  </div>
+
+  <!-- SLIDE 3 — adicione quantos quiser seguindo o mesmo padrão -->
+  <div class="slide">
+    <!-- <img src="banner3.jpg" class="slide-bg"> -->
+    <div class="slide-bg-placeholder" style="background: linear-gradient(120deg, #1a2a3a 0%, #2d4a5a 50%, #3d6a7a 100%);"></div>
+    <div class="slide-content">
+      <div class="eyebrow">Bem-estar &amp; Saúde</div>
+      <h2>Produtos Naturais e Veganos</h2>
+      <p>Cuide de você com produtos naturais, veganos e sustentáveis. Qualidade certificada para toda a família.</p>
+      <a href="categorias.html" class="btn-slide">Ver categorias</a>
+    </div>
+  </div>
+
+    <!-- SLIDE 4 — -->
+    <div class="slide">
+      <!-- <img src="banner3.jpg" class="slide-bg"> -->
+      <div class="slide-bg-placeholder" style="background: linear-gradient(120deg, #1a2a3a 0%, #2d4a5a 50%, #3d6a7a 100%);"></div>
+      <div class="slide-content">
+        <div class="eyebrow">Bem-estar &amp; Saúde</div>
+        <h2>Produtos Naturais e Veganos</h2>
+        <p>Cuide de você com produtos naturais, veganos e sustentáveis. Qualidade certificada para toda a família.</p>
+        <a href="categorias.html" class="btn-slide">Ver categorias</a>
+      </div>
+    </div>
+
+      <!-- SLIDE 5 -->
+  <div class="slide">
+    <!-- <img src="banner3.jpg" class="slide-bg"> -->
+    <div class="slide-bg-placeholder" style="background: linear-gradient(120deg, #1a2a3a 0%, #2d4a5a 50%, #3d6a7a 100%);"></div>
+    <div class="slide-content">
+      <div class="eyebrow">Bem-estar &amp; Saúde</div>
+      <h2>Produtos Naturais e Veganos</h2>
+      <p>Cuide de você com produtos naturais, veganos e sustentáveis. Qualidade certificada para toda a família.</p>
+      <a href="categorias.html" class="btn-slide">Ver categorias</a>
+    </div>
+  </div>
+
+    <!-- SLIDE 6 -->
+    <div class="slide">
+      <!-- <img src="banner3.jpg" class="slide-bg"> -->
+      <div class="slide-bg-placeholder" style="background: linear-gradient(120deg, #1a2a3a 0%, #2d4a5a 50%, #3d6a7a 100%);"></div>
+      <div class="slide-content">
+        <div class="eyebrow">Bem-estar &amp; Saúde</div>
+        <h2>Produtos Naturais e Veganos</h2>
+        <p>Cuide de você com produtos naturais, veganos e sustentáveis. Qualidade certificada para toda a família.</p>
+        <a href="categorias.html" class="btn-slide">Ver categorias</a>
+      </div>
+    </div>
+
+  <button class="slider-arrow left" onclick="slideMove(-1)">&#8249;</button>
+  <button class="slider-arrow right" onclick="slideMove(1)">&#8250;</button>
+
+  <div class="slider-dots" id="slider-dots"></div>
+</section>
+
+<!-- ===== CATEGORIES ===== -->
+<section id="categories-section">
+  <div class="section-title c">CATEGORIAS</div>
+  <div class="categories-grid">
+    <a href="saude.html" class="cat-item">
+      <div class="cat-circle">
+      <img src="Imagens/cat-saude.png" alt="Saúde">
+      </div>
+      <span class="cat-label">SAÚDE</span>
+    </a>
+    <a href="emagrecer.html" class="cat-item">
+      <div class="cat-circle">
+        <img src="Imagens/cat-emagre.png" alt="Saúde">
+      </div>
+      <span class="cat-label">EMAGRECER</span>
+    </a>
+    <a href="beleza.html" class="cat-item">
+      <div class="cat-circle">
+        <img src="Imagens/cat-bele.png" alt="Saúde">
+      </div>
+      <span class="cat-label">BELEZA</span>
+    </a>
+    <a href="fitness.html" class="cat-item">
+      <div class="cat-circle">
+        <img src="Imagens/cat-fitness.png" alt="Saúde">
+      </div>
+      <span class="cat-label">FITNESS</span>
+    </a>
+    <a href="saude-sexual.html" class="cat-item">
+      <div class="cat-circle">
+        <img src="Imagens/cat-sex.png" alt="Saúde">
+      </div>
+      <span class="cat-label">SAÚDE SEXUAL</span>
+    </a>
+    <a href="destaques.html" class="cat-item">
+      <div class="cat-circle">
+        <img src="Imagens/cat-cabelo.png" alt="Saúde">
+      </div>
+      <span class="cat-label">CABELO</span>
+    </a>
+  </div>
+</section>
+
+<!-- ===== BANNER CENTRO ===== -->
+<section id="banner-centro">
+  <!-- Fundo: substitua pela sua imagem de fundo:
+       <img src="banner-centro-bg.jpg" class="banner-centro-bg"> -->
+  <div class="banner-centro-bg-placeholder"></div>
+  <div class="banner-centro-overlay"></div>
+  <div class="banner-centro-content">
+    <div class="banner-centro-text">
+      <div class="eyebrow">COMO ESCOLHER ONDE MANIPULAR?</div>
+      <h3>NA DIVINA TERRA PHARMACY ACREDITAMOS<br>EM 3 PILARES FUNDAMENTAIS:</h3>
+      <p>1. Rastreabilidade Total: Sabemos a origem de cada insumo utilizado.<br>
+      2. Precisão Rigorosa: Tecnologia de ponta no cuidado farmacêutico detalhista.<br>
+      3. Transparência: Você tem canal direto com nossos especialistas para tirar dúvidas.</p>
+      <p>Sua saúde merece uma fórmula feita exclusivamente para você, com a confiança que só quem entende de manipulação pode oferecer.</p>
+      <a href="#" class="btn-saiba">Saiba mais</a>
+    </div>
+    <div class="banner-centro-image">
+      <!-- Substitua pela imagem da moça:
+           <img src="banner-centro-pessoa.jpg" alt=""> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DESTAQUES ===== -->
+<section id="destaques-section">
+  <div class="section-title">DESTAQUES</div>
+    <button class="products-arrow left" onclick="productMove(-1)">&#8249;</button>
+  <div class="products-wrapper">
+    <div class="products-track" id="products-track">
+      <!-- Produto 1 -->
+      <div class="product-card">
+        <div class="product-img-wrapper">
+          <img src="Imagens/hidra.png" alt="Saúde">
+          <span class="product-badge fitness">PELE</span>
+          <div class="product-vegan">🌿</div>
+        </div>
+        <div class="product-info">
+          <a href="produto1.html">SABONETE HIDRATANTE</a>
+          <div class="product-sub">Limpeza profunda e hidratação</div>
+          <div class="product-price">R$ 86,99</div>
+          <div class="btn-quero-a"><a href="produto1.html" class="btn-quero">QUERO JÁ</a></div>
+        </div>
+      </div>
+
+      <!-- Produto 2 -->
+      <div class="product-card">
+        <div class="product-img-wrapper">
+          <img src="Imagens/espu.png" alt="Saúde">
+          <span class="product-badge saude">SAÚDE ÍNTIMA</span>
+          <div class="product-vegan">🌿</div>
+        </div>
+        <div class="product-info">
+          <a href="produto2.html">DIVINA ÍNTIMA | ESPUMA DE LIMPEZA</a>
+          <div class="product-sub">Limpeza suave e proteção</div>
+          <div class="product-price">R$ 120,50</div>
+          <div class="btn-quero-a"><a href="produto2.html" class="btn-quero">QUERO JÁ</a></div>
+        </div>
+      </div>
+
+      <!-- Produto 3 -->
+      <div class="product-card">
+        <div class="product-img-wrapper">
+          <span class="product-badge fitness">PELE</span>
+          <img src="Imagens/eyel.png" alt="Saúde">
+          <div class="product-vegan">🌿</div>
+        </div>
+        <div class="product-info">
+          <a href="produto3.html">EUE LIGHT & CREME 30 FIRMAR</a>
+          <div class="product-sub">Contornos, firmeza, clareador e hidratação profunda</div>
+          <div class="product-price">R$ 460,00</div>
+          <div class="btn-quero-a"><a href="produto3.html" class="btn-quero">QUERO JÁ</a></div>
+        </div>
+      </div>
+
+      <!-- Produto 4 -->
+      <div class="product-card">
+        <div class="product-img-wrapper">
+          <img src="Imagens/link.png" alt="Saúde">
+          <div class="product-vegan">🌿</div>
+        </div>
+        <div class="product-info">
+          <a href="produto4.html">LIFTSKIN</a>
+          <div class="product-sub">Pele firme e sem linhas de expressão</div>
+          <div class="product-price">R$ 110,00</div>
+          <div class="btn-quero-a"><a href="produto4.html" class="btn-quero">QUERO JÁ</a></div>
+        </div>
+      </div>
+
+      <!-- Produto 5 -->
+      <div class="product-card">
+        <div class="product-img-wrapper">
+          <img src="Imagens/seru.png" alt="Saúde">
+          <span class="product-badge fitness">PELE</span>
+          <div class="product-vegan">🌿</div>
+        </div>
+        <div class="product-info">
+          <a href="produto5.html">Sérum Belicé</a>
+          <div class="product-sub">Pele iluminada e hidratação com Vitamina C</div>
+          <div class="product-price">R$ 249,99</div>
+          <div class="btn-quero-a"><a href="produto5.html" class="btn-quero">QUERO JÁ</a></div>
+        </div>
+      </div>
+
+      <!-- Produto 6 -->
+      <div class="product-card">
+        <div class="product-img-wrapper">
+          <img src="Imagens/mera.png" alt="Saúde">
+          <span class="product-badge emagrecer">EMAGRECER</span>
+          <div class="product-vegan">🌿</div>
+        </div>
+        <div class="product-info">
+          <a href="produto6.html">Meratrim 400mg</a>
+          <div class="product-sub">Controle metabólico para o emagrecimento</div>
+          <div class="product-price">R$ 160,69</div>
+          <div class="btn-quero-a"><a href="produto6.html" class="btn-quero">QUERO JÁ</a></div>
+        </div>
+      </div>
+
+      <!-- Produto 7 -->
+      <div class="product-card">
+        <div class="product-img-wrapper">
+          <img src="Imagens/oral.png" alt="Saúde">
+          <span class="product-badge emagrecer">EMAGRECER</span>
+          <div class="product-vegan">🌿</div>
+        </div>
+        <div class="product-info">
+          <a href="produto7.html">Spray Oral Gymnema</a>
+          <div class="product-sub">Diminua a vontade por açúcar</div>
+          <div class="product-price">R$ 330,33</div>
+          <div class="btn-quero-a"><a href="produto7.html" class="btn-quero">QUERO JÁ</a></div>
+        </div>
+      </div>
+
+      <!-- Produto 8 -->
+      <div class="product-card">
+        <div class="product-img-wrapper">
+          <img src="Imagens/sabo.png" alt="Saúde">
+          <div class="product-vegan">🌿</div>
+        </div>
+        <div class="product-info">
+          <a href="produto8.html">SABONETE PROBIÓTICO</a>
+          <div class="product-sub">Limpeza sem ressecar, controle de oleosidade e impurezas + hidratação</div>
+          <div class="product-price">R$ 89,90</div>
+          <div class="btn-quero-a"><a href="produto8.html" class="btn-quero">QUERO JÁ</a></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <button class="products-arrow right" onclick="productMove(1)">&#8250;</button>
+</section>
+
+<!-- ===== BLOG RECENTES ===== -->
+<section id="blog-section">
+  <div class="section-title">BLOG - RECENTES</div>
+  <section class="content-grid" id="content-grid">
+    <article data-blog-post class="blog-card" onclick="window.location.href='pascoadivina.html'" style="cursor: pointer;">
+        <div class="card-img-wrapper">
+            <img class="card-img-wrapper-placeholder" src="Imagens/3.png" alt="Páscoa Divina Terra">
+            <div class="blog-img-placeholder"></div>
+        </div>
+        <div class="card-body blog-info">
+            <h2 class="card-title">As Cápsulas de Moringa<br>podem mudar seu corpo</h2>
+            <span class="card-date">01 abril 2026</span>
+        </div>
+    </article>
+
+    <article class="blog-card" onclick="window.location.href='diadamulher.html'" style="cursor: pointer;">
+        <div class="card-img-wrapper">
+            <img class="card-img-wrapper-placeholder" src="Imagens\4.png" alt="Dia da Mulher">
+        </div>
+        <div class="card-body">
+            <h2 class="card-title">Tenha mais saúde cuidando<br>das articulações e imunidade</h2>
+            <span class="card-date">13 fevereiro 2026</span>
+        </div>
+    </article>
+
+    <article class="blog-card" onclick="window.location.href='sauderesabor.html'" style="cursor: pointer;">
+        <div class="card-img-wrapper">
+            <img src="Imagens\2.png" alt="Saúde e Sabor">
+        </div>
+        <div class="card-body">
+            <h2 class="card-title">Por que a Odilia é<br>essencial para você?</h2>
+            <span class="card-date">28 janeiro 2026</span>
+        </div>
+    </article>
+
+    <article class="blog-card">
+        <div class="card-img-wrapper">
+            <img src="Imagens\8.png" alt="Ectoína">
+        </div>
+        <div class="card-body">
+            <h2 class="card-title">Perigos de uma manipulação de<br>fórmula sem qualidade</h2>
+            <span class="card-date">27 janeiro, 2026</span>
+        </div>
+    </article>
+  </section>
+  <button class="btn-carregar" id="btn1" onclick="carregarMais(1)"> <a href="menublogs.html">TODOS ARTIGOS</a></button>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-logo">
+    <div class="logo-main">
+      <img src="Imagens\LOGOGRANDE.png">
+    </div>
+  </div>
+
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h5>QUEM SOMOS</h5>
+      <p>Estamos a tantos anos no mercado, trabalhando com marcas com garantia de qualidade e produtos autorais com pesquisas e análises comprovadas. Melhoria de saúde, qualidade de vida e produtividade. Tudo em um só lugar.</p>
+    </div>
+    <div class="footer-col">
+      <h5>INSTITUCIONAL</h5>
+      <a href="sobre.html">Sobre nós</a>
+      <a href="como-comprar.html">Como comprar</a>
+      <a href="garantia.html">Garantia de qualidade</a>
+      <a href="privacidade.html">Política de privacidade e cookies</a>
+      <a href="menublogs.html">Blog</a>
+    </div>
+    <div class="footer-col">
+      <h5>ATENDIMENTO</h5>
+      <p style="color:rgba(255,255,255,0.6);margin-bottom:8px;">Seg a Sex das 8h às 20h</p>
+      <a href="suporte.html">Suporte &amp; dúvidas</a>
+      <a href="tel:51999151221">telefone: (51) 999151221</a>
+      <a href="mailto:online@divinaterrapharmacy.com.br">online@divinaterrapharmacy.com.br</a>
+      <a href="https://maps.google.com" target="_blank">R. Independência, 1273,<br>São Leopoldo 93010-004</a>
+    </div>
+    <div class="footer-col">
+      <h5>REDES SOCIAIS</h5>
+      <div class="social-icons">
+        <a href="https://instagram.com" target="_blank" class="social-icon" title="Instagram">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://youtube.com" target="_blank" class="social-icon" title="YouTube">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+        </a>
+        <a href="https://facebook.com" target="_blank" class="social-icon" title="Facebook">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    Copyright © 2060 – Todos os direitos reservados – Divina Terra Pharmacy
+  </div>
+</footer>
+
+<script>
+// ===== BANNER SLIDER =====
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const dotsContainer = document.getElementById('slider-dots');
+let autoplayTimer;
+
+// Create dots
+slides.forEach((_, i) => {
+  const dot = document.createElement('div');
+  dot.className = 'dot' + (i === 0 ? ' active' : '');
+  dot.addEventListener('click', () => goToSlide(i));
+  dotsContainer.appendChild(dot);
+});
+
+function updateSlider() {
+  slides.forEach((s, i) => s.classList.toggle('active', i === currentSlide));
+  document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === currentSlide));
+}
+
+function goToSlide(n) {
+  currentSlide = (n + slides.length) % slides.length;
+  updateSlider();
+  resetAutoplay();
+}
+
+function slideMove(dir) { goToSlide(currentSlide + dir); }
+
+function resetAutoplay() {
+  clearInterval(autoplayTimer);
+  autoplayTimer = setInterval(() => goToSlide(currentSlide + 1), 5000);
+}
+
+resetAutoplay();
+
+// ===== PRODUCTS CAROUSEL =====
+let productIndex = 0;
+const track = document.getElementById('products-track');
+const totalProducts = track.children.length;
+const visibleProducts = 4;
+const maxIndex = totalProducts - visibleProducts;
+
+function productMove(dir) {
+  productIndex += dir;
+  if (productIndex > maxIndex) productIndex = 0;
+  if (productIndex < 0) productIndex = maxIndex;
+  const cardWidth = track.children[0].offsetWidth + 20;
+  track.style.transform = `translateX(-${productIndex * cardWidth}px)`;
+}
+
+// ===== SEARCH =====
+const searchData = [
+  { title: 'Saúde', url: 'saude.html' },
+  { title: 'Beleza', url: 'beleza.html' },
+  { title: 'Fitness', url: 'fitness.html' },
+  { title: 'Emagrecer', url: 'emagrecer.html' },
+  { title: 'Saúde Sexual', url: 'saude-sexual.html' },
+  { title: 'Manipule sua Receita', url: 'receita.html' },
+  { title: 'Faça seu Pedido', url: 'pedido.html' },
+  { title: 'Blog', url: 'menublogs.html' },
+  { title: 'Sobre Nós', url: 'sobre.html' },
+  { title: 'Contato', url: 'contato.html' },
+];
+
+const searchResultsEl = document.getElementById('search-results');
+
+function doSearch() {
+  const q = document.getElementById('search-input').value.toLowerCase().trim();
+  if (!q) { searchResultsEl.style.display = 'none'; return; }
+  const results = searchData.filter(item => item.title.toLowerCase().includes(q));
+  if (results.length === 0) {
+    searchResultsEl.innerHTML = '<div class="search-result-item">Nenhum resultado encontrado.</div>';
+  } else {
+    searchResultsEl.innerHTML = results.map(r =>
+      `<div class="search-result-item" onclick="location.href='${r.url}'">${r.title}</div>`
+    ).join('');
+  }
+  searchResultsEl.style.display = 'block';
+}
+
+function handleSearch(e) {
+  if (e.key === 'Enter') doSearch();
+  else if (e.key === 'Escape') searchResultsEl.style.display = 'none';
+  else setTimeout(doSearch, 100);
+}
+
+document.addEventListener('click', e => {
+  if (!e.target.closest('.search-bar') && !e.target.closest('#search-results')) {
+    searchResultsEl.style.display = 'none';
+  }
+});
+
+// ===== LOAD BLOG POSTS FROM menublogs.html =====
+
+loadBlogPosts();
+</script>
+</body>
+</html>
