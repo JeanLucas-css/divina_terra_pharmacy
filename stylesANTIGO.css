@@ -49,15 +49,6 @@
   opacity: 1;
   text-decoration: underline;
 }
-
-.logo-container {
-  width:178,98;
-  height:50px;
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
   :root {
     --green-dark: #1a3a2a;
     --green-mid: #2d5a3d;
@@ -78,70 +69,70 @@
     background: #ffffff;
     color: var(--text-dark);
   }
+ /* ===== TOP HEADER ===== */
+ #top-header {
+  background: #003e2a;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 15px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 60px;
+}
 
-  /* ===== TOP HEADER ===== */
-  #top-header {
-    background: #003e2a;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 15px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 60px;
-  }
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 60px;
+}
 
-  .top-nav {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 60px;
-  }
+.top-nav a {
+  color: #c79b53;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
 
-  .top-nav a {
-    color: #c79b53;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    transition: color 0.2s;
-  }
+.top-nav a:hover { color: #ffffff;}
 
-  .top-nav a:hover { color: #ffffff;}
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #f7f5f1;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 20px;
+  padding: 6px 14px;
+  gap: 8px;
+  flex: 0 0 300px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
 
-  .search-bar {
-    display: flex;
-    align-items: center;
-    background: #f7f5f1;
-    border: 1px solid rgba(255,255,255,0.25);
-    border-radius: 20px;
-    padding: 6px 14px;
-    gap: 8px;
-    flex: 0 0 300px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
-  }
+.search-bar input {
+  background: none;
+  border: none;
+  outline: none;
+  color: #8c6c4c;
+  font-size: 12px;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+}
 
-  .search-bar input {
-    background: none;
-    border: none;
-    outline: none;
-    color: #8c6c4c;
-    font-size: 12px;
-    width: 100%;
-    font-family: 'Lato', sans-serif;
-  }
+.search-bar button {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.6);
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0;
+  transition: color 0.2s;
+}
 
-  .search-bar button {
-    background: none;
-    border: none;
-    color: rgba(255,255,255,0.6);
-    cursor: pointer;
-    font-size: 14px;
-    padding: 0;
-    transition: color 0.2s;
-  }
 
 
   /* ===== SECONDARY NAV ===== */
@@ -195,11 +186,13 @@
   .item {
     padding: 15px 63px;
     font-size: 16px;
-    font-size: clamp(12px, 1vw, 16px);
+    font-size: clamp(10px, 1vw, 12px);
     font-weight: 600;
     text-transform: "Brandon Grotesque";
     color: #003e2a;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .item1 {
@@ -293,12 +286,13 @@ header {
 }
 
 .logo-container {
-    width:178,98;
-    height:35px;
-    flex: 1;
-    display: flex;
-    justify-content: center;
+  width:178,98;
+  height:50px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
+
 
 .header-search {
     flex: 1;
@@ -526,7 +520,7 @@ main {
 /* ===== FOOTER ===== */
 footer {
   background: #144230;
-  padding: 60px 40px 24px;
+  padding: 20px 40px 24px;
 }
 
 .footer-logo {
@@ -577,7 +571,7 @@ footer {
 
 .footer-col h5 {
   color: var(--white);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 900;
   letter-spacing: 2px;
   text-transform: uppercase;

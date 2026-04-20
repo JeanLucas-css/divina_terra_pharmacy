@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="icon" href="imagens/logo_aba.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saúde das Articulações | Divina Terra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 0 1.5rem;
+        }
+
+        .article-header {
+            margin-bottom: 40px;
+        }
+
+        .article-breadcrumb {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .article-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .article-meta {
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 30px;
+        }
+
+        .article-meta span {
+            margin-right: 20px;
+        }
+
+        .article-image {
+            width: 100%;
+            margin-bottom: 30px;
+            border-radius: 0;
+        }
+
+        .article-content {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .article-content p {
+            margin-bottom: 10px;
+            font-family: 'General Sans', sans-serif;
+        }
+
+        .article-content h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #333;
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+
+        .article-content h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        .article-content ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .article-content ul li {
+            margin-bottom: 1px;
+            list-style-type: disc;
+            font-family: 'General Sans', sans-serif;
+        }
+
+        .article-content strong {
+            color: #333;
+            font-weight: 700;
+            font-family: "Brandon Grotesque";
+        }
+
+        .article-content a {
+            color: #006644;
+            text-decoration: underline;
+        }
+
+        .references-section {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+        }
+
+        .references-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .references-header h3 {
+            margin: 0;
+        }
+
+        .references-toggle {
+            font-size: 20px;
+            color: #999;
+            transition: transform 0.3s ease;
+        }
+
+        .references-toggle.open {
+            transform: rotate(180deg);
+        }
+
+        .references-content {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .references-content.open {
+            display: block;
+        }
+
+        .references-content ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .references-content ul li {
+            margin-bottom: 15px;
+            font-size: 13px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .article-share {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            align-items: center;
+        }
+
+        .article-share span {
+            font-weight: 600;
+            font-size: 13px;
+        }
+
+        .article-share a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background-color: #f0f0f0;
+            border-radius: 50%;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .article-share a:hover {
+            background-color: #006644;
+            color: #fff;
+        }
+
+        .newsletter-internal {
+            background-color: #F5F1E9;
+            padding: 40px;
+            margin: 50px 0;
+            border-radius: 0;
+            text-align: center;
+        }
+
+        .newsletter-internal h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .newsletter-internal p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .newsletter-internal form {
+            display: flex;
+            gap: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-internal input {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .newsletter-internal button {
+            padding: 12px 30px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .related-articles {
+            margin-top: 60px;
+        }
+
+        .related-articles h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .related-card {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .related-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .related-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .related-card h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            line-height: 1.4;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 24px;
+            }
+
+            .related-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .newsletter-internal form {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .article-container {
+                padding: 0 1rem;
+            }
+
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<!-- ===== TOP HEADER ===== -->
+<header id="top-header">
+  <a href="index.html" class="logo-area">
+    <div class="logo-container">
+      <!-- Placeholder para o logo oficial -->
+          <img src="Imagens\LOGO.png">
+    </div>
+  </a>
+
+  <nav class="top-nav">
+    <a href="index.html">INÍCIO</a>
+    <a href="menublogs.html">BLOG</a>
+    <a href="sobre.html">SOBRE NÓS</a>
+  </nav>
+
+  <div class="search-bar">
+    <button onclick="doSearch()">
+      <i class="fa-solid fa-magnifying-glass" style="color: #c2baaf;"></i>
+    </button>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <input type="text" id="search-input" placeholder="encontre o que você precisa..." onkeydown="handleSearch(event)">
+  </div>
+
+  <nav class="top-nav">
+    <a href="contato.html">CONTATO</a>
+  </nav>
+</header>
+
+<!-- Search Results Overlay -->
+<div id="search-results"></div>
+
+<!-- ===== SECONDARY NAV ===== -->
+<nav id="secondary-nav">
+  <div class="item"><a href="https://www.lojadivinaterra.com.br/suplementos">CATEGORIAS</a></div>
+  <div class="item"><a href="https://www.lojadivinaterra.com.br/imunidade">SAÚDE</a></div>
+  <div class="item"><a href="https://www.lojadivinaterra.com.br/bem-estar">BELEZA</a></div>
+  <div class="item"><a href="https://www.lojadivinaterra.com.br/saude-da-mulher">FITNESS</a></div>
+  <div class="item"><a href="https://www.lojadivinaterra.com.br/sono">SEU PEDIDO</a></div>
+  <div class="item1"><a href="https://www.lojadivinaterra.com.br/imunidade" class="active">MANIPULAÇÃO</a></div>
+</nav>
+</head>
+
+    <!-- Conteúdo do Artigo -->
+    <main class="article-container">
+        <article>
+            <div class="article-header">
+                <div class="article-breadcrumb">
+                    <a href="menublog.html" style="color: #999;">BEM-ESTAR</a> | <a href="menublog.html" style="color: #999;">LONGEVIDADE</a>
+                </div>
+                <h1 class="article-title">Tenha mais saúde cuidando das articulações e imunidade</h1>
+                <div class="article-meta">
+                    <span>Postado: 05/03/2026</span>
+                    <span>Atualizado: 05/03/2026</span>
+                    <span>Tempo de leitura: 3 min</span>
+                </div>
+            </div>
+
+            <img src="Imagens\4_banner.png" alt="Dia da Mulher" class="article-image">
+
+            <div class="article-content">
+                <p>Fortaleça sua Imunidade com o Kit da Divina Terra Pharmacy! 💚</p>
+                <p>Prepare-se para enfrentar o dia a dia com a defesa que seu corpo merece!</p>
+                <p>Apresentamos o Kit Imunidade da Divina Terra Pharmacy, uma combinação poderosa de nutrientes vitais para blindar sua saúde e bem-estar.</p>
+
+                <h2>O que você recebe:</h2>
+
+                <p>Alguns suplementos podem ajudar a manter o corpo nutrido e ativo.</p>
+
+                <ul>
+                    <li><strong>Vitamina C 500mg</strong> Poderoso antioxidante, essencial para a função imunológica, formação de colágeno e absorção de ferro.</li>
+                    <li><strong>Vitamina D 4000UI</strong> Fundamental para a saúde óssea, muscular e, principalmente, para a regulação do sistema imunológico. </li>
+                    <li><strong>Proknee</strong> auxilia na manutenção da função articular e proporciona renovação de cartilagens.</li>
+                </ul>
+                <p>Juntos, estes três componentes trabalham em sinergia para otimizar suas defesas naturais e promover sua saúde integral.</p>
+
+                <h2>Por que escolher o Kit Imunidade da Divina Terra Pharmacy?</h2>
+                <ul>
+                    <li><strong>Fórmulas Potentes:</strong> Concentrações ideais para máximo aproveitamento pelo seu organismo.</li>
+                    <li><strong> Qualidade Garantida:</strong> Confiança e pureza em cada cápsula. </li>
+                    <li><strong>Saúde de Dentro para Fora:</strong> Não apenas fortalece sua imunidade, mas também apoia articulações e ossos..</li>
+                </ul>
+
+                <p>Não espere o resfriado chegar. Invista na sua saúde hoje!</p>
+            </div>
+
+            <!-- Seção de Referências Expansível -->
+            <div class="references-section">
+                <div class="references-header" onclick="toggleReferences()">
+                    <h3>Referências</h3>
+                    <span class="references-toggle" id="ref-toggle">▼</span>
+                </div>
+                <div class="references-content" id="ref-content">
+                    <ul>
+                        <li>1. Organização Mundial da Saúde (OMS). Menopausa e saúde da mulher. Disponível em: www.who.int</li>
+                        <li>2. Sociedade Brasileira de Climatério. Guia prático sobre menopausa. São Paulo, 2024.</li>
+                        <li>3. Estudo clínico sobre terapia hormonal e qualidade de vida. Journal of Women's Health, 2023.</li>
+                        <li>4. Nutrição e menopausa: impacto de micronutrientes. American Journal of Clinical Nutrition, 2024.</li>
+                        <li>5. Exercício físico e sintomas climatéricos. Medicine & Science in Sports & Exercise, 2023.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Compartilhamento -->
+            <div class="article-share">
+                <span>Compartilhe:</span>
+                <a href="https://www.facebook.com/share_channel/#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </article>
+        <!-- Artigos Relacionados -->
+        <div class="related-articles">
+          <h3>Artigos similares</h3>
+          <div class="related-grid">
+              <div class="related-card" onclick="window.location.href='moringa.html'">
+                  <img src="Imagens/3.png" alt="Dia da Mulher">
+                  <h4>As Cápsulas de Moringa<br>podem mudar seu corpo</h4>
+              </div>
+              <div class="related-card" onclick="window.location.href='capsula.html'">
+                <img src="Imagens/2.png" alt="Fadiga ocular">
+                <h4>Você sabe escolher a Capsula<br>Ideal para o seu paciente?</h4>
+            </div>
+              <div class="related-card" onclick="window.location.href='odilia.html'">
+                  <img src="Imagens/7.png" alt="Ectoína">
+                  <h4>Por que a Odilia é<br>essencial para você?</h4>
+              </div>
+              <div class="related-card">
+                  <img src="Imagens/8.png" alt="Nutrição infantil">
+                  <h4>Perigos de uma manipulação de<br>fórmula sem qualidade</h4>
+              </div>
+          </div>
+      </div>
+  </main>
+
+
+     <!-- Rodapé Oficial Divina Terra -->
+  <html lang="pt-BR">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Rodapé</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="footer.css">
+      </head>
+<body>
+      
+      <!-- ===== FOOTER ===== -->
+<footer>
+<div class="footer-logo">
+  <div class="logo-main">
+    <img src="Imagens\LOGOGRANDE.png">
+  </div>
+</div>
+
+<div class="footer-grid">
+  <div class="footer-col">
+    <h5>QUEM SOMOS</h5>
+    <p>Estamos a tantos anos no mercado, trabalhando com marcas com garantia de qualidade e produtos autorais com pesquisas e análises comprovadas. Melhoria de saúde, qualidade de vida e produtividade. Tudo em um só lugar.</p>
+  </div>
+  <div class="footer-col">
+    <h5>INSTITUCIONAL</h5>
+    <a href="sobre.html">Sobre nós</a>
+    <a href="como-comprar.html">Como comprar</a>
+    <a href="garantia.html">Garantia de qualidade</a>
+    <a href="privacidade.html">Política de privacidade e cookies</a>
+    <a href="menublogs.html">Blog</a>
+  </div>
+  <div class="footer-col">
+    <h5>ATENDIMENTO</h5>
+    <p style="color:rgba(255,255,255,0.6);margin-bottom:8px;">Seg a Sex das 8h às 20h</p>
+    <a href="suporte.html">Suporte &amp; dúvidas</a>
+    <a href="tel:51999151221">telefone: (51) 999151221</a>
+    <a href="mailto:online@divinaterrapharmacy.com.br">online@divinaterrapharmacy.com.br</a>
+    <a href="https://maps.google.com" target="_blank">R. Independência, 1273,<br>São Leopoldo 93010-004</a>
+  </div>
+  <div class="footer-col">
+    <h5>REDES SOCIAIS</h5>
+    <div class="social-icons">
+      <a href="https://instagram.com" target="_blank" class="social-icon" title="Instagram">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <a href="https://youtube.com" target="_blank" class="social-icon" title="YouTube">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+      </a>
+      <a href="https://facebook.com" target="_blank" class="social-icon" title="Facebook">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+        <script src="footer.js"></script>
+        </body>
+        </html>
+    </footer>
+    <script>
+        function toggleReferences() {
+            const content = document.getElementById('ref-content');
+            const toggle = document.getElementById('ref-toggle');
+            content.classList.toggle('open');
+            toggle.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
