@@ -66,14 +66,13 @@ color: white;
   align-items: center;
   justify-content: center;
 }
-
-.topbar__text {
-  opacity: 0.9;
-}
-
 .topbar__inner1 a{
   color: white;
   text-decoration: none;
+}
+
+.topbar__text {
+  opacity: 0.9;
 }
 
 .topbar__links {
