@@ -71,6 +71,11 @@ color: white;
   opacity: 0.9;
 }
 
+.topbar__inner1 a{
+  color: white;
+  text-decoration: none;
+}
+
 .topbar__links {
   display: flex;
   gap: 24px;
