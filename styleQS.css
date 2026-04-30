@@ -177,6 +177,10 @@ color: white;
   justify-content: center;
 }
 
+.topbar__inner1 a{
+  color: white;
+  text-decoration: none;
+}
 .topbar__text {
   opacity: 0.9;
 }
