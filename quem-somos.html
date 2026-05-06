@@ -5,57 +5,61 @@
   <link rel="icon" href="Imagens/logo_aba.png" type="image/png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Divina Terra Pharmacy</title>
-  <link rel="stylesheet" href="styleQS.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
- <!-- ===== TOP HEADER ===== -->
+  <div class="container">
+    <!-- ===== TOP HEADER ===== -->
       <!-- ===== TOP BAR ===== -->
-<div class="topbar1">
-  <div class="topbar__inner1">
-    <a href="https://wa.me/+5551999151221" class="topbar__text1"><i class="fa-brands fa-whatsapp"></i> Envie sua receita pelo WhatsApp (51) 99915-1221</a>
-  </div>
-</div>
-<header id="top-header">
-  <a href="index.html" class="logo-area">
-    <div class="logo-container">
-      <!-- Placeholder para o logo oficial -->
-          <img src="Imagens\LOGO.png">
+    <div class="topbar">
+      <div class="topbar__inner">
+        <a href="https://wa.me/+5551999151221" class="topbar__text"><i class="fa-brands fa-whatsapp"></i> Envie sua receita pelo WhatsApp (51) 99915-1221</a>
+      </div>
     </div>
-  </a>
-
-  <nav class="top-nav">
-    <a href="quem-somos.html">QUEM SOMOS</a>
-    <a href="prescritores.html">PRESCRITOR</a>
-    <a href="index.html">PRODUTOS</a>
-    <a href="menublogs.html">BLOG</a>
-
-  </nav>
-
-  <div class="search-bar">
-    <button onclick="doSearch()">
-      <i class="fa-solid fa-magnifying-glass" style="color: #c2baaf;"></i>
-    </button>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <input type="text" id="search-input" placeholder="encontre o que você precisa..." onkeydown="handleSearch(event)">
-  </div>
-  <nav class="top-nav2">
-    <a href="contato.html">CONTATO</a>
-  </nav>
-</header>
-
-<!-- Search Results Overlay -->
-<div id="search-results"></div>
-
-<!-- ===== SECONDARY NAV ===== -->
-<nav id="secondary-nav">
-  <div class="item"><a href="#">SAÚDE</a></div>
-  <div class="item"><a href="#">EMAGRECER</a></div>
-  <div class="item"><a href="#">PELE</a></div>
-  <div class="item"><a href="#">CABELO</a></div>
-  <div class="item"><a href="#">FITNESS</a></div>
-  <div class="item1"><a href="#" class="active">MANIPULE SUA FÓRMULA</a></div>
-</nav>
+    
+      <!-- ===== TOP NAV ===== -->
+    <header id="top-header">
+      <a href="index.html" class="logo-area">
+        <div class="logo-container">
+              <img src="Imagens\LOGO.png">
+        </div>
+      </a>
+      <nav>
+        <ul class="top-nav">
+          <li><a href="quem-somos.html">Quem Somos</a></li>
+          <li><a href="prescritores.html">Prescritor</a></li>
+          <li><a href="#">Produtos</a></li>
+          <li><a href="menublogs.html">Blog</a></li>
+          <li><a href="contato.html">CONTATO</a></li>
+        </ul>
+      </nav>
+      <div class="search-bar">
+        <button onclick="doSearch()">
+          <i class="fa-solid fa-magnifying-glass" style="color: #c2baaf;"></i>
+        </button>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <input type="text" id="search-input" placeholder="encontre o que você precisa..." onkeydown="handleSearch(event)">
+      </div>
+      <nav class="top-nav-contato">
+        <a href="manipulacao.html">MANIPULE</a>
+      </nav>
+    </header>
+    
+    <!-- Search Results Overlay -->
+    <div id="search-results"></div>
+    
+    <!-- ===== SECONDARY NAV ===== -->
+    <nav id="secondary-nav">
+      <div class="item"><a href="#">SAÚDE</a></div>
+      <div class="item"><a href="#">EMAGRECER</a></div>
+      <div class="item"><a href="#">PELE</a></div>
+      <div class="item"><a href="#">CABELO</a></div>
+      <div class="item"><a href="#">FITNESS</a></div>
+      <div class="item-dourado"><a href="#" class="active">MANIPULE SUA FÓRMULA</a></div>
+    </nav>
 
   <!-- =============================================
        PÁGINA: QUEM SOMOS
@@ -108,6 +112,7 @@
 
     <!-- ---- SEÇÃO ESCURA: TEXTO CENTRALIZADO ---- -->
     <section class="section-dark">
+      <p class="section-label animate-on-scroll">Título para Visualizar</p>
       <h2 class="animate-on-scroll delay-1">Tecnologia, ciência e cuidado em cada fórmula</h2>
       <p class="animate-on-scroll delay-2">
         Aqui, combinamos tecnologia de ponta, matéria-prima certificada e uma equipe
@@ -226,7 +231,7 @@
       <!-- Coluna 3: WhatsApp + Redes Sociais -->
       <div class="footer-col">
         <h5>Nos Chame no WhatsApp</h5>
-        <a href="https://wa.me/+5551999151221" class="whatsapp-btn">
+        <a href="#" class="whatsapp-btn">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
             <path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.126 1.526 5.865L0 24l6.335-1.508A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.882a9.877 9.877 0 01-5.023-1.368l-.361-.214-3.759.895.952-3.659-.235-.376A9.838 9.838 0 012.118 12C2.118 6.538 6.538 2.118 12 2.118S21.882 6.538 21.882 12 17.462 21.882 12 21.882z"/>

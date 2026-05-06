@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <link rel="icon" href="Imagens/logo_aba.png" type="image/png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Divina Terra Pharmacy</title>
+  <title>Vivência — Blog — Página 2</title>
+  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+
   <div class="container">
     <!-- ===== TOP HEADER ===== -->
       <!-- ===== TOP BAR ===== -->
@@ -65,28 +65,20 @@
       <div class="banner-blog" style="max-width: 1300px; margin: 0px auto; padding: 0 1.5rem;">
         <img src="Imagens\banner1.png" alt="Banner Noorskin">
       </div>
-  
+
 
   <!-- ================================================
        SEÇÃO DE POSTS
+       Idêntica ao index.html — o JS cuida de tudo.
        ================================================ -->
-  <section class="section-posts" id="posts-recentes">
-      <h2 class="section-title">Publicações</h2>
-    <!--
-      Grid de posts — preenchido automaticamente pelo script.js.
-      renderizarComPaginacao(1) exibe os 8 posts mais recentes.
-    -->
-    <div class="posts-grid" id="posts-container"></div>
+  <section class="section-posts">
 
-    <!--
-      Barra de paginação — gerada automaticamente pelo script.js.
-      Aparece centralizada abaixo do grid.
-    -->
+    <div class="posts-grid" id="posts-container"></div>
     <div id="paginacao-container"></div>
 
   </section>
 
-<!-- ===== BANNER SLIDER BLOG ===== -->
+  <!-- ===== BANNER SLIDER BLOG ===== -->
 <section id="banner-slider-blog">
   <!-- SLIDE 1 -->
   <div class="slide active">
@@ -125,7 +117,9 @@
 
   <div class="slider-dots" id="slider-dots"></div>
   </section>
- <!-- =============================================
+
+  <footer class="site-footer">
+  <!-- =============================================
        RODAPÉ (FOOTER) — COMUM A TODAS AS PÁGINAS
        ============================================= -->
        <footer class="footer">
@@ -145,7 +139,7 @@
             <li><a href="#">Como comprar</a></li>
             <li><a href="#">Garantia de qualidade</a></li>
             <li><a href="#">Política de privacidade e cookies</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><a href="menublogs.html">Blog</a></li>
           </ul>
         </div>
   
@@ -258,8 +252,10 @@
         clearInterval(autoplayTimer);
         autoplayTimer = setInterval(() => goToSlide(currentSlide + 1), 5000);
       }
-      
-      resetAutoplay();
+
+    // Renderiza a PÁGINA 2 do blog
+    // Para criar pagina3.html, copie este arquivo e mude o número para 3
+    renderizarComPaginacao(2);
   </script>
 
 </body>
